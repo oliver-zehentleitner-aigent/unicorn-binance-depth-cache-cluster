@@ -450,6 +450,13 @@ def main():
         prog='ubdcc',
         description='UNICORN Binance DepthCache Cluster — Cluster Manager\n'
                     'https://github.com/oliver-zehentleitner/unicorn-binance-depth-cache-cluster',
+        epilog='Interactive shell commands (available inside "ubdcc start"):\n'
+               '  add-dcn [count]   Spawn new DCN process(es)\n'
+               '  remove-dcn <name> Stop and remove a DCN\n'
+               '  status            Show cluster status\n'
+               '  restart <name>    Restart a specific pod\n'
+               '  stop              Shut down the cluster\n'
+               '  help              Show available shell commands',
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
     parser.add_argument('-v', '--version', action='version', version=f'ubdcc {__version__}')
