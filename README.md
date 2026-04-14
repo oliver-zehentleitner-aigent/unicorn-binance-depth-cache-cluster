@@ -36,11 +36,11 @@ Deploy UBDCC on a Kubernetes cluster and create DepthCaches through the REST API
 
 The cluster consists of three pod types:
 - **mgmt** (1x) — manages the cluster state, distributes DepthCaches across nodes
-- **restapi** (1x per node) — REST API gateway, load-balances requests to DCN pods
+- **restapi** (1-3x) — REST API gateway, load-balances requests to DCN pods
 - **dcn** (multiple) — runs the actual DepthCaches via UBLDC
 
 Each DCN pod runs a single Python process, so **one DCN pod per CPU core** gives the best performance (Python's GIL 
-limits each process to one core). A typical setup with 2 servers and 4 cores each: 1 mgmt, 2 restapi, 6 DCN pods.
+limits each process to one core). A typical setup with 2 servers and 4 cores each: 1 mgmt, 3 restapi, 4 DCN pods.
 
 For example, when you configure the system to create 200 DepthCaches with a `desired_quantity` of `2`, UBDCC will deploy
 2 DepthCaches for each symbol/market. These are evenly distributed across the DCN pods and can download order book 
