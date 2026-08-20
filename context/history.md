@@ -2,6 +2,7 @@
 
 ## LUCIT-Systems-and-Development origin
 
+**Type:** decision
 **Status:** superseded — repo now lives under `oliver-zehentleitner`, MIT-licensed
 **Evidence:** confirmed
 **Source:** commit `e5aecb1` "Remove LUCIT licensing and rebrand to MIT open source"; earliest commit `32bdf57` "INIT", 2024-09-04, already within the LUCIT era
@@ -12,6 +13,7 @@ Same lineage as the rest of the suite — this module was not born newer/indepen
 
 ## OVH → ghcr.io registry migration
 
+**Type:** decision
 **Status:** superseded — migration complete
 **Evidence:** confirmed
 **Source:** commits `0421504` "K8s YAMLs: migrate to ghcr.io with version tag instead of SHA digest", `587c750` "Helm: update image registry URLs from OVH to ghcr.io"
@@ -22,6 +24,7 @@ Docker images now live on `ghcr.io/oliver-zehentleitner/ubdcc-*`. `admin/k8s/*.y
 
 ## No conda-forge distribution — by design, not an oversight
 
+**Type:** decision
 **Status:** active
 **Evidence:** confirmed
 **Source:** commit `ea5fd2c`: "UBDCC is intentionally not distributed via conda-forge (PyPI + ghcr.io Docker only). The badge pointed at a build_conda.yml workflow that doesn't exist and never will."
