@@ -3,7 +3,7 @@
 ## Out-of-sync DepthCaches return an explicit error, never silently stale data
 
 **Type:** decision
-**Status:** active, stable since early in the project's life
+**Status:** active
 **Evidence:** confirmed
 **Source:** code path in `packages/ubdcc-dcn/ubdcc_dcn/RestEndpoints.py`; present since commit `938eed7`, Oct 2024 — i.e. from the LUCIT era already, not a recent addition
 
