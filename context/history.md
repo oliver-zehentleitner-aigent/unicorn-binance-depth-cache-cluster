@@ -2,8 +2,10 @@
 
 ## LUCIT-Systems-and-Development origin
 
+> Superseded — repo now lives under `oliver-zehentleitner`, MIT-licensed.
+
 **Type:** decision
-**Status:** superseded — repo now lives under `oliver-zehentleitner`, MIT-licensed
+**Status:** superseded
 **Evidence:** confirmed
 **Source:** commit `e5aecb1` "Remove LUCIT licensing and rebrand to MIT open source"; earliest commit `32bdf57` "INIT", 2024-09-04, already within the LUCIT era
 
@@ -13,8 +15,10 @@ Same lineage as the rest of the suite — this module was not born newer/indepen
 
 ## OVH → ghcr.io registry migration
 
+> Superseded — migration complete.
+
 **Type:** decision
-**Status:** superseded — migration complete
+**Status:** superseded
 **Evidence:** confirmed
 **Source:** commits `0421504` "K8s YAMLs: migrate to ghcr.io with version tag instead of SHA digest", `587c750` "Helm: update image registry URLs from OVH to ghcr.io"
 

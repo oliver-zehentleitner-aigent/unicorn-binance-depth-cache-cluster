@@ -178,9 +178,5 @@ Placeholder tests only — see TASKS.md.
 - `SO_REUSEADDR` is set on the port check to handle TIME_WAIT after a restart
 - `os._exit(0)` is scheduled 0.5s after the `/shutdown` response to ensure the process terminates even if the main loop is stuck in `asyncio.sleep`
 
-<!-- keep-the-why:config -->
-- context: `context/`
-- init: complete
-- context-schema: 0.9.0
-- capture-confirmation: confirm-when-unsure
-<!-- /keep-the-why:config -->
+Keep the Why's config for this project migrated to .keep-the-why on
+2026-09-04 — requires skill version 0.10.0 or later to read it.
