@@ -56,7 +56,7 @@ extensions = [
     "sphinxcontrib.autoprogram",
 ]
 
-autodoc_mock_imports = ["requests"]
+autodoc_mock_imports = ["requests", "fastapi", "uvicorn", "kubernetes", "unicorn_binance_local_depth_cache"]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
