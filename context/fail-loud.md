@@ -2,6 +2,7 @@
 
 ## Out-of-sync DepthCaches return an explicit error, never silently stale data
 
+**Id:** e325b6fb-117a-4f10-aa63-6d070b01188a
 **Type:** decision
 **Status:** active
 **Evidence:** confirmed

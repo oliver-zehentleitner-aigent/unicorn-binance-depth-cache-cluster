@@ -4,10 +4,12 @@
 
 > Superseded — repo now lives under `oliver-zehentleitner`, MIT-licensed.
 
+**Id:** 1fb27149-5ceb-4cb0-813c-0c8072e82a79
 **Type:** decision
 **Status:** superseded
 **Evidence:** confirmed
 **Source:** commit `e5aecb1` "Remove LUCIT licensing and rebrand to MIT open source"; earliest commit `32bdf57` "INIT", 2024-09-04, already within the LUCIT era
+**Superseded by:** https://github.com/oliver-zehentleitner/unicorn-binance-suite — 2749fc08-cdca-456b-a8bd-fd4b646ff64c — as of 2026-09-28
 
 Same lineage as the rest of the suite — this module was not born newer/independent of the LUCIT history despite being one of the more recently active repos. Package directories were renamed `lucit-ubdcc-* → ubdcc-*` as part of the rebrand.
 
@@ -17,10 +19,12 @@ Same lineage as the rest of the suite — this module was not born newer/indepen
 
 > Superseded — migration complete.
 
+**Id:** c090532e-b1b7-4884-bac3-ed1d17cf1ceb
 **Type:** decision
 **Status:** superseded
 **Evidence:** confirmed
 **Source:** commits `0421504` "K8s YAMLs: migrate to ghcr.io with version tag instead of SHA digest", `587c750` "Helm: update image registry URLs from OVH to ghcr.io"
+**Superseded by:** none — the migration was completed (commits `0421504`, `587c750`); no later decision replaced it
 
 Docker images now live on `ghcr.io/oliver-zehentleitner/ubdcc-*`. `admin/k8s/*.yaml` and `dev/helm/ubdcc/` no longer reference the old OVH container registry or its SHA256 digests.
 
@@ -28,6 +32,7 @@ Docker images now live on `ghcr.io/oliver-zehentleitner/ubdcc-*`. `admin/k8s/*.y
 
 ## No conda-forge distribution — by design, not an oversight
 
+**Id:** 8ee1d2a2-dccc-4cda-bc0f-8fef0e601e00
 **Type:** decision
 **Status:** active
 **Evidence:** confirmed
