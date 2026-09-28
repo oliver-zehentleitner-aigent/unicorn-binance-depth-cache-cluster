@@ -17,14 +17,13 @@ Same lineage as the rest of the suite — this module was not born newer/indepen
 
 ## OVH → ghcr.io registry migration
 
-> Superseded — migration complete.
+> Completed — the images live on ghcr.io.
 
 **Id:** c090532e-b1b7-4884-bac3-ed1d17cf1ceb
 **Type:** decision
-**Status:** superseded
+**Status:** active
 **Evidence:** confirmed
 **Source:** commits `0421504` "K8s YAMLs: migrate to ghcr.io with version tag instead of SHA digest", `587c750` "Helm: update image registry URLs from OVH to ghcr.io"
-**Superseded by:** none — the migration was completed (commits `0421504`, `587c750`); no later decision replaced it
 
 Docker images now live on `ghcr.io/oliver-zehentleitner/ubdcc-*`. `admin/k8s/*.yaml` and `dev/helm/ubdcc/` no longer reference the old OVH container registry or its SHA256 digests.
 
