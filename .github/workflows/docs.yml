@@ -35,8 +35,18 @@ jobs:
         run: bash dev/sphinx/install_sphinx.sh
       # autodoc imports the package for the API reference; without its
       # dependencies every module page comes out empty
-      - name: Install the package's own dependencies
-        run: if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
+      # The cluster has no top-level requirements.txt: its five packages are
+      # imported from source (conf.py puts packages/*/ on sys.path), so what
+      # autodoc needs are their third-party dependencies. The packages' own
+      # pins on each other (ubdcc-*==x.y.z) are left out — they would pull a
+      # released version over the source being documented. Mocking fastapi
+      # and friends instead does not work: a class whose base is mocked is a
+      # mock itself, and autodoc drops it without a warning.
+      - name: Install the packages' third-party dependencies
+        run: |
+          awk 1 packages/*/requirements.txt | grep -v -i '^ubdcc' | grep -v '^\s*#' | sort -u > /tmp/docs-requirements.txt
+          cat /tmp/docs-requirements.txt
+          python3 -m pip install -r /tmp/docs-requirements.txt
       - name: Build the docs into docs/
         run: bash dev/sphinx/create_docs.sh
       - name: Fail if the build produced no index
