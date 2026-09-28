@@ -44,7 +44,7 @@ jobs:
       # mock itself, and autodoc drops it without a warning.
       - name: Install the packages' third-party dependencies
         run: |
-          cat packages/*/requirements.txt | grep -v -i '^ubdcc' | grep -v '^\s*#' | sort -u > /tmp/docs-requirements.txt
+          awk 1 packages/*/requirements.txt | grep -v -i '^ubdcc' | grep -v '^\s*#' | sort -u > /tmp/docs-requirements.txt
           cat /tmp/docs-requirements.txt
           python3 -m pip install -r /tmp/docs-requirements.txt
       - name: Build the docs into docs/
